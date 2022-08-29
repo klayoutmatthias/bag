@@ -3,6 +3,46 @@
 BAG, a recursive acronym which stands for "BAG AMS Generator", is a fork and successor of
 the [BAG\_framework](https://github.com/ucb-art/BAG_framework).
 
+## Installation
+
+### (Optional) Create Python Virtual Environment
+
+Create a Python virtual environment:
+
+```bash
+python3 -m venv $HOME/.venvs/bag
+```
+
+Activate the virtual environment and set the environment variable telling BAG where to find Python.
+
+```bash
+activate $HOME/.venvs/bag/bin/activate
+export PYBAG_PYTHON=$HOME/.venvs/bag/bin/python
+```
+
+### Install BAG
+
+#### BAG
+
+To install simply navigate to this directory and execute: 
+
+```bash
+python -m pip install .
+```
+
+#### PyBAG + CBAG + pybind11
+
+To install the other required tools navigate to the `pybag` directory and execute:
+
+```bash
+python -m pip install . --log build.log
+```
+
+It is very possible that some debugging is required at this step due to the large C++ build stage.
+The `build.log` can help in the debugging process.
+
+
+
 ## Licensing
 
 This library is licensed under the Apache-2.0 license.  However, some source files are licensed
